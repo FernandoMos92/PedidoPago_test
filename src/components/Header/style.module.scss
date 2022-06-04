@@ -1,5 +1,10 @@
+$screen-mb-l: 425px;
+$screen-tablet: 768px;
+$screen-laptop: 1024px;
+$screen-laptop-l: 1440px;
+
 .headerContainer {
-  width: 100%;
+  width: 100vw;
   height: 61px;
   padding: 0px 16px 0px 16px;
   display: flex;
@@ -28,7 +33,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-left: 0.8rem;
+  margin-left: 3rem;
   width: fit-content;
 
   // :first-child {
