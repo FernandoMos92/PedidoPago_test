@@ -1,0 +1,59 @@
+.cardContainer {
+  border: 2px solid #eaefed;
+  box-sizing: border-box;
+  width: 319px;
+  height: 89px;
+  margin-top: 24px;
+  border-radius: 8px;
+  padding: 16px;
+  order: 1;
+  align-self: stretch;
+  flex-grow: 0;
+
+  div {
+    position: relative;
+
+    h4 {
+      color: #587169;
+      font-weight: 600;
+      font-style: normal;
+      font-size: 14px;
+      line-height: 140%;
+      margin-bottom: 8px;
+    }
+
+    .iconArrowDown {
+      position: absolute;
+      margin-top: 20px;
+      right: 0;
+      top: 0;
+      width: 25px;
+      height: 25px;
+      color: #587169;
+    }
+
+    p {
+      font-size: 12px;
+      font-weight: 600;
+      line-height: 16.8px;
+      color: #587169;
+      text-align: left;
+    }
+  }
+
+  div > span {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    align-items: center;
+    width: 90%;
+
+    img {
+      width: 32px;
+      height: 32px;
+      margin-right: 8px;
+
+      border-radius: 50%;
+    }
+  }
+}
