@@ -2,7 +2,6 @@ import { useState } from "react";
 import styles from "./style.module.scss";
 
 import { FiChevronDown } from "react-icons/fi";
-import { AiFillFileAdd } from "react-icons/ai";
 
 export function CardEmployer() {
   const [isDrop, setIsDrop] = useState(false);
@@ -53,7 +52,7 @@ export function CardEmployer() {
           </div>
 
           <button>
-            <AiFillFileAdd className={styles.addFile} />
+            <img src="/images/file-plus.svg" alt="Icon file plus" />
             Ações
           </button>
         </>

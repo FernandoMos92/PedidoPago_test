@@ -4,10 +4,8 @@ export function Header() {
   return (
     <header className={styles.headerContainer}>
       <div className={styles.userIcon}>LZ</div>
-
       <div className={styles.logoContainer}>
-        <img src="/images/pp-logoBack.png" alt="Logo pp back" />
-        <img src="/images/pp-logo.png" alt="" />
+        <img src="/images/brand.svg" alt="Logo PedidoPago" />
       </div>
     </header>
   );

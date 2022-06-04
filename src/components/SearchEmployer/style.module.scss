@@ -14,26 +14,27 @@
   order: 1;
   flex-grow: 0;
   position: relative;
+  margin-bottom: 125px;
 
   select {
     box-sizing: border-box;
-
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
-
+    padding: 10px;
+    color: #587169;
     background-color: #FFF;
     border: 2px solid #CAD6D1;
     border-radius: 8px;
-
     flex: none;
     order: 1;
     flex-grow: 0;
-
-    width: 23rem;
-    height: 60px;
+    font-weight: 500;
+     font-size: 16px;
+     line-height: 24px;
+    width: 316px;
+    height: 56px;
     margin-left: 0.3rem;
     margin-bottom: 40px;
     position: relative;
@@ -46,12 +47,15 @@
 
     input {
       background-color: #FFF;
+      color: #587169;
       border: 2px solid #CAD6D1;
-      width: 23rem;
+      width: 316px;
+      height: 56px;
       margin-left: 0.3rem;
       border-radius: 8px;
-      padding: 20px;
+      padding: 18px 22px;
       padding-left: 45px;
+      font-size: 16px;
     }
 
     span {
@@ -59,18 +63,18 @@
       background-color: #FFF;
       color: #A3B8B0;
       padding: 0 5px;
-      bottom: 80%;
+      bottom: 78%;
       left: 8%;
       z-index: 99;
     }
   
     .searchIcon {
       position: absolute;
-      width: 1.5rem;
-      height: 1.5rem;
+      width: 1.7rem;
+      height: 1.7rem;
       color: #587169;
-      bottom: 40%;
-      left: 7.9%;
+      bottom: 28%;
+      left: 6.5%;
       z-index: 98;
     }
   }
@@ -85,12 +89,36 @@
 }
 
 .cardContainer {
+
   h2{
     font-size: 16px;
     line-height: 16px;
     color: #34423D;
     font-weight: 600;
     width: 100%;
-    margin-right: 5rem;
+    margin-left: 0.3rem;
+    margin-bottom: 24px;
+  }
+
+  .btnMore{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #B5F1DD;
+    width: 318px;
+    height: 52px;
+    color: #34423D;
+    background-color: #FFF;
+    border-radius: 8px;
+    margin-top: 24px;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    text-align: center;
+
+    img {
+      margin-right: 8px;
+      font-size: 16px;
+    }
   }
 }

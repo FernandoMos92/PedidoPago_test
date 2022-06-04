@@ -1,9 +1,9 @@
 .cardContainer {
   border: 2px solid #eaefed;
   box-sizing: border-box;
-  width: 319px;
+  width: 316px;
   height: 89px;
-  margin-top: 24px;
+  margin-top: 8px;
   border-radius: 8px;
   padding: 16px;
   order: 1;
@@ -64,13 +64,14 @@
   box-sizing: border-box;
   width: 319px;
   height: 380px;
-  margin-top: 24px;
+  margin-top: 8px;
   border-radius: 8px;
   padding: 16px;
   order: 1;
   align-self: stretch;
   flex-grow: 0;
   position: relative;
+  filter: drop-shadow(0px 4px 8px rgba(165, 171, 179, 0.16));
 
   .gridContainer {
     display: grid;
@@ -194,11 +195,5 @@
     position: absolute;
     bottom: 24px;
     margin-left: -2px;
-
-    .addFile {
-      width: 22px;
-      height: 28px;
-      color: #1DD195;
-    }
   }
 }

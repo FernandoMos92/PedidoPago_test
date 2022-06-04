@@ -23,6 +23,13 @@ export function SearchEmployer() {
       <section className={styles.cardContainer}>
         <h2>Listagem de colaboradores</h2>
         <CardEmployer />
+        <CardEmployer />
+        <CardEmployer />
+        <CardEmployer />
+        <button className={styles.btnMore}>
+          <img src="/images/refresh-ccw.svg" alt="Refresh logo" />
+          Carregar mais
+        </button>
       </section>
     </div>
   );
