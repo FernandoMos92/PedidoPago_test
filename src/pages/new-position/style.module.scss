@@ -1,9 +1,28 @@
 $neutralBlack:#34423D;
+$neutralTertiary: #EAEFED;
+$neutralWhite: #FFFFFF;
 
 .positionContainer {
 
 
   .topContainer {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    margin: 42px 0px 24px 16px;
+
+    span {
+      align-items: center;
+      background-color: $neutralTertiary;
+      border-radius: 8px;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      margin-right: 16px;
+      height: 32px;
+      padding: 4px;
+      width: 32px;
+    }
 
     h1 {
       color: $neutralBlack;
@@ -13,5 +32,18 @@ $neutralBlack:#34423D;
       line-height: 100%;
       width: fit-content;
     }
+  }
+
+  .mainContainer {
+    align-items: center;
+    background-color: $neutralWhite;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    filter: drop-shadow(8px 4px 8px rgba(165, 171, 179, 0.16));
+    margin: 0 auto;
+    height: fit-content;
+    padding: 40px 0px;
+    width: 96.66%;
   }
 }
