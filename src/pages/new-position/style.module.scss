@@ -1,0 +1,17 @@
+$neutralBlack:#34423D;
+
+.positionContainer {
+
+
+  .topContainer {
+
+    h1 {
+      color: $neutralBlack;
+      font-size: 24px;
+      font-weight: 600;
+      height: 24px;
+      line-height: 100%;
+      width: fit-content;
+    }
+  }
+}
