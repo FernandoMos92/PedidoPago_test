@@ -25,6 +25,11 @@
       "static/chunks/main.js",
       "static/chunks/pages/_error.js"
     ],
+    "/employer-details": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/employer-details.js"
+    ],
     "/invitation-list": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",

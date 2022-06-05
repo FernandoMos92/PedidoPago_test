@@ -1,5 +1,6 @@
 import styles from "./style.module.scss";
 import { FiSearch } from "react-icons/fi";
+import COMPONENTS from "../../components";
 
 export default function EmployerPosition() {
   return (
@@ -19,15 +20,26 @@ export default function EmployerPosition() {
           <input type="text" name="" placeholder="Pesquise por nome ou cpf" />
         </div>
 
-      <hr className={styles.horizonLine} />
+        <hr className={styles.horizonLine} />
 
-      <h4>Listagem de cargos</h4>
+        <h4>Listagem de cargos</h4>
 
-      <section className={styles.cardContainer}>
+        <section className={styles.cardContainer}>
+          <COMPONENTS.CardPosition />
+          <COMPONENTS.CardPosition />
+          <COMPONENTS.CardPosition />
+          <COMPONENTS.CardPosition />
+        </section>
 
+        <button>
+          <img 
+            alt=""
+            className={styles.iconRefreshButton} 
+            src="/images/refresh-ccw.svg" 
+          />
+          Carregar mais
+        </button>
       </section>
-      </section>
-
     </div>
   );
 }
