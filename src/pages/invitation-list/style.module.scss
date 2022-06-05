@@ -1,0 +1,125 @@
+$whiteColor: #ffffff;
+$borderColor: #cad6d1;
+$darkGray: #34423D;
+$blueGray: #587169;
+$standardRadius: 8px;
+$standardHeight: 56px;
+
+.mainContainer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  h2 {
+    color: $darkGray;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 100%;
+    width: fit-content;
+    margin: 40px 0 24px 16px;
+  }
+
+  .searchContainer {
+    align-items: center;
+    background-color: $whiteColor;
+    border-radius: $standardRadius;
+    box-shadow: 0px 4px 8px rgba(165, 171, 179, 0.16);
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    order: 1;
+    padding: 40px 0px;
+    position: relative;
+    margin: 0 auto;
+    width: 96.66%;
+
+    img {
+      background-color: $whiteColor;
+      cursor: pointer;
+      height: 24px;
+      position: absolute;
+      right: 26px;
+      top: 55px;
+      user-select: none;
+      width: 24px;
+    }
+
+    select {
+      align-items: center;
+      background-color: $whiteColor;
+      border: 2px solid $borderColor;
+      border-radius: $standardRadius;
+      box-sizing: border-box;
+      color: $blueGray;
+      display: flex;
+      flex-direction: row;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 150%;
+      justify-content: space-between;
+      height: $standardHeight;
+      order: 0;
+      //necessario diminuir o padding para a letra nao ficar cortada nas opções
+      // padding standard 20px
+      padding: 10px;
+      width: 87.77%;
+      transition: all 0.3s ease-out;
+    }
+  }
+
+  .inputContainer {
+    box-sizing: border-box;
+    position: relative;
+
+    input {
+      background-color: $whiteColor;
+      color: $blueGray;
+      border: 2px solid $borderColor;
+      width: 22.57rem;
+      height: $standardHeight;
+      border-radius: $standardRadius;
+      padding: 18px 22px;
+      padding-left: 52px;
+      font-size: 1.14rem;
+    }
+
+    span {
+      background-color: $whiteColor;
+      bottom: 78%;
+      color: #a3b8b0;
+      left: 5%;
+      padding: 0 5px;
+      position: absolute;
+      z-index: 99;
+    }
+
+    .searchIcon {
+      bottom: 28%;
+      color: $blueGray;
+      height: 1.7rem;
+      left: 17px;
+      position: absolute;
+      width: 1.7rem;
+      z-index: 98;
+    }
+  }
+
+  .horizonLine{
+    width: 100%;
+    border: 1px solid #EAEFED;
+    bottom: 40px;
+    gap: 10px;
+  }
+
+  h4 {
+    color: $darkGray;
+    font-size: 16px;
+    font-weight: 600;
+    height: 16px;
+    line-height: 100%;
+    left: 0;
+    margin-right: 43%;
+    text-align: center;
+    width: 44.60%;
+  }
+}

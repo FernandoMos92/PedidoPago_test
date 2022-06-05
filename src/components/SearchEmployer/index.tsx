@@ -5,6 +5,7 @@ import { CardEmployer } from "../CardEmployer";
 export function SearchEmployer() {
   return (
     <div className={styles.searchContainer}>
+
       <section>
         <select name="" id="">
           <option value="">Colaboradores</option>
@@ -18,6 +19,7 @@ export function SearchEmployer() {
         </div>
 
       </section>
+      
       <hr className={styles.horizonLine} />
 
       <section className={styles.cardContainer}>
