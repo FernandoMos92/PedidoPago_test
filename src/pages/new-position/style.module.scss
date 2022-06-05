@@ -1,10 +1,13 @@
-$neutralBlack:#34423D;
-$neutralTertiary: #EAEFED;
-$neutralWhite: #FFFFFF;
+$neutralBlack: #34423d;
+$neutralTertiary: #eaefed;
+$neutralWhite: #ffffff;
+$neutralColor2: #cad6d1;
+$neutralColor3: #a3b8b0;
+$neutralColor5: #587169;
 
 .positionContainer {
-
-
+  margin-bottom:40px;
+  
   .topContainer {
     align-items: center;
     display: flex;
@@ -45,5 +48,86 @@ $neutralWhite: #FFFFFF;
     height: fit-content;
     padding: 40px 0px;
     width: 96.66%;
+
+    h3 {
+      color: $neutralBlack;
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 100%;
+      text-align: start;
+      margin: 0px 0px 24px 24px;
+      height: 16px;
+      width: 100%;
+    }
+
+    .filterContainer {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      width: 100%;
+
+      select {
+        background-color: $neutralWhite;
+        border: 2px solid $neutralColor2;
+        border-radius: 8px;
+        box-sizing: border-box;
+        color: $neutralColor5;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 150%;
+        padding: 10px;
+        position: relative;
+        margin: 0px 0px 24px 0px;
+        height: 56px;
+        width: 96%;
+      }
+      p {
+        background-color: $neutralWhite;
+        color: $neutralColor3;
+        font-size: 14px;
+        font-weight: 500;
+        left: 20px;
+        position: absolute;
+        top: -9px;
+        width: fit-content;
+        z-index: 1;
+      }
+
+      .inputContainer {
+        align-items: center;
+        display: flex;
+        position: relative;
+        justify-content: center;
+        width: 100%;
+
+        input {
+          background-color: $neutralWhite;
+          border: 2px solid $neutralColor2;
+          border-radius: 8px;
+          box-sizing: border-box;
+          color: $neutralColor5;
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 150%;
+          padding: 10px;
+          position: relative;
+          margin: 0px 0px 40px 0px;
+          height: 56px;
+          width: 96%;
+        }
+        p {
+          position: absolute;
+        }
+      }
+    }
+
+    .horizonLine{
+      width: 100%;
+      border: 1px solid $neutralTertiary;
+      bottom: 40px;
+      gap: 10px;
+    }
+    
   }
 }
