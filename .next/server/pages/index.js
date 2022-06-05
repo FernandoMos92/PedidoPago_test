@@ -12,6 +12,16 @@ exports.id = "pages/index";
 exports.ids = ["pages/index"];
 exports.modules = {
 
+/***/ "./src/components/CardDetails/style.module.scss":
+/*!******************************************************!*\
+  !*** ./src/components/CardDetails/style.module.scss ***!
+  \******************************************************/
+/***/ ((module) => {
+
+eval("// Exports\nmodule.exports = {\n\n};\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9zcmMvY29tcG9uZW50cy9DYXJkRGV0YWlscy9zdHlsZS5tb2R1bGUuc2Nzcy5qcyIsIm1hcHBpbmdzIjoiQUFBQTtBQUNBOztBQUVBIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vcHBfdGVzdC8uL3NyYy9jb21wb25lbnRzL0NhcmREZXRhaWxzL3N0eWxlLm1vZHVsZS5zY3NzP2UxZmMiXSwic291cmNlc0NvbnRlbnQiOlsiLy8gRXhwb3J0c1xubW9kdWxlLmV4cG9ydHMgPSB7XG5cbn07XG4iXSwibmFtZXMiOltdLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///./src/components/CardDetails/style.module.scss\n");
+
+/***/ }),
+
 /***/ "./src/components/CardEmployer/style.module.scss":
 /*!*******************************************************!*\
   !*** ./src/components/CardEmployer/style.module.scss ***!
@@ -49,6 +59,17 @@ eval("// Exports\nmodule.exports = {\n\t\"searchContainer\": \"style_searchConta
 /***/ ((module) => {
 
 eval("// Exports\nmodule.exports = {\n\t\"homeContainer\": \"style_homeContainer__vToyO\"\n};\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9zcmMvc3R5bGUvc3R5bGUubW9kdWxlLnNjc3MuanMiLCJtYXBwaW5ncyI6IkFBQUE7QUFDQTtBQUNBO0FBQ0EiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly9wcF90ZXN0Ly4vc3JjL3N0eWxlL3N0eWxlLm1vZHVsZS5zY3NzPzI4MTQiXSwic291cmNlc0NvbnRlbnQiOlsiLy8gRXhwb3J0c1xubW9kdWxlLmV4cG9ydHMgPSB7XG5cdFwiaG9tZUNvbnRhaW5lclwiOiBcInN0eWxlX2hvbWVDb250YWluZXJfX3ZUb3lPXCJcbn07XG4iXSwibmFtZXMiOltdLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///./src/style/style.module.scss\n");
+
+/***/ }),
+
+/***/ "./src/components/CardDetails/index.tsx":
+/*!**********************************************!*\
+  !*** ./src/components/CardDetails/index.tsx ***!
+  \**********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"CardDetails\": () => (/* binding */ CardDetails)\n/* harmony export */ });\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-dev-runtime */ \"react/jsx-dev-runtime\");\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _style_module_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./style.module.scss */ \"./src/components/CardDetails/style.module.scss\");\n/* harmony import */ var _style_module_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_style_module_scss__WEBPACK_IMPORTED_MODULE_1__);\n\n\nfunction CardDetails() {\n    return /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n        className: (_style_module_scss__WEBPACK_IMPORTED_MODULE_1___default().containerCardDetails),\n        children: \"CARD DETAILS\"\n    }, void 0, false, {\n        fileName: \"/home/mos/Documentos/Projetos/PedidoPago_test/src/components/CardDetails/index.tsx\",\n        lineNumber: 5,\n        columnNumber: 5\n    }, this);\n}\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9zcmMvY29tcG9uZW50cy9DYXJkRGV0YWlscy9pbmRleC50c3guanMiLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7QUFBQTtBQUF5QztBQUVsQyxTQUFTQyxXQUFXLEdBQUc7SUFDNUIscUJBQ0UsOERBQUNDLEtBQUc7UUFDRkMsU0FBUyxFQUFFSCxnRkFBMkI7a0JBQ3ZDLGNBRUQ7Ozs7O1lBQU0sQ0FDUDtDQUNGIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vcHBfdGVzdC8uL3NyYy9jb21wb25lbnRzL0NhcmREZXRhaWxzL2luZGV4LnRzeD8xZWZlIl0sInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBzdHlsZXMgZnJvbSAnLi9zdHlsZS5tb2R1bGUuc2Nzcyc7IFxuXG5leHBvcnQgZnVuY3Rpb24gQ2FyZERldGFpbHMoKSB7XG4gIHJldHVybiAoXG4gICAgPGRpdiBcbiAgICAgIGNsYXNzTmFtZT17c3R5bGVzLmNvbnRhaW5lckNhcmREZXRhaWxzfVxuICAgID5cbiAgICAgIENBUkQgREVUQUlMU1xuICAgIDwvZGl2PlxuICApXG59Il0sIm5hbWVzIjpbInN0eWxlcyIsIkNhcmREZXRhaWxzIiwiZGl2IiwiY2xhc3NOYW1lIiwiY29udGFpbmVyQ2FyZERldGFpbHMiXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///./src/components/CardDetails/index.tsx\n");
 
 /***/ }),
 
@@ -92,7 +113,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _Header__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Header */ \"./src/components/Header/index.tsx\");\n/* harmony import */ var _SearchEmployer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./SearchEmployer */ \"./src/components/SearchEmployer/index.tsx\");\n\n\nconst COMPONENTS = {\n    Header: _Header__WEBPACK_IMPORTED_MODULE_0__.Header,\n    SearchEmployer: _SearchEmployer__WEBPACK_IMPORTED_MODULE_1__.SearchEmployer\n};\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (COMPONENTS);\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9zcmMvY29tcG9uZW50cy9pbmRleC50c3guanMiLCJtYXBwaW5ncyI6Ijs7Ozs7O0FBQWtDO0FBQ2dCO0FBRWxELE1BQU1FLFVBQVUsR0FBRztJQUNqQkYsTUFBTTtJQUNOQyxjQUFjO0NBQ2Y7QUFFRCxpRUFBZUMsVUFBVSxFQUFDIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vcHBfdGVzdC8uL3NyYy9jb21wb25lbnRzL2luZGV4LnRzeD80MTRlIl0sInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7IEhlYWRlciB9IGZyb20gJy4vSGVhZGVyJztcbmltcG9ydCB7IFNlYXJjaEVtcGxveWVyIH0gZnJvbSAnLi9TZWFyY2hFbXBsb3llcic7XG5cbmNvbnN0IENPTVBPTkVOVFMgPSB7XG4gIEhlYWRlcixcbiAgU2VhcmNoRW1wbG95ZXIsXG59XG5cbmV4cG9ydCBkZWZhdWx0IENPTVBPTkVOVFM7Il0sIm5hbWVzIjpbIkhlYWRlciIsIlNlYXJjaEVtcGxveWVyIiwiQ09NUE9ORU5UUyJdLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///./src/components/index.tsx\n");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _Header__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Header */ \"./src/components/Header/index.tsx\");\n/* harmony import */ var _SearchEmployer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./SearchEmployer */ \"./src/components/SearchEmployer/index.tsx\");\n/* harmony import */ var _CardDetails__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./CardDetails */ \"./src/components/CardDetails/index.tsx\");\n\n\n\nconst COMPONENTS = {\n    Header: _Header__WEBPACK_IMPORTED_MODULE_0__.Header,\n    SearchEmployer: _SearchEmployer__WEBPACK_IMPORTED_MODULE_1__.SearchEmployer,\n    CardDetails: _CardDetails__WEBPACK_IMPORTED_MODULE_2__.CardDetails\n};\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (COMPONENTS);\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9zcmMvY29tcG9uZW50cy9pbmRleC50c3guanMiLCJtYXBwaW5ncyI6Ijs7Ozs7OztBQUFrQztBQUNnQjtBQUNOO0FBRTVDLE1BQU1HLFVBQVUsR0FBRztJQUNqQkgsTUFBTTtJQUNOQyxjQUFjO0lBQ2RDLFdBQVc7Q0FDWjtBQUVELGlFQUFlQyxVQUFVLEVBQUMiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly9wcF90ZXN0Ly4vc3JjL2NvbXBvbmVudHMvaW5kZXgudHN4PzQxNGUiXSwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHsgSGVhZGVyIH0gZnJvbSAnLi9IZWFkZXInO1xuaW1wb3J0IHsgU2VhcmNoRW1wbG95ZXIgfSBmcm9tICcuL1NlYXJjaEVtcGxveWVyJztcbmltcG9ydCB7IENhcmREZXRhaWxzIH0gZnJvbSAnLi9DYXJkRGV0YWlscyc7XG5cbmNvbnN0IENPTVBPTkVOVFMgPSB7XG4gIEhlYWRlcixcbiAgU2VhcmNoRW1wbG95ZXIsXG4gIENhcmREZXRhaWxzLFxufVxuXG5leHBvcnQgZGVmYXVsdCBDT01QT05FTlRTOyJdLCJuYW1lcyI6WyJIZWFkZXIiLCJTZWFyY2hFbXBsb3llciIsIkNhcmREZXRhaWxzIiwiQ09NUE9ORU5UUyJdLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///./src/components/index.tsx\n");
 
 /***/ }),
 

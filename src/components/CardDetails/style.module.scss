@@ -1,0 +1,36 @@
+.containerCardDetails {
+  width: 400px;
+  background-color: #FFF;
+  border-radius: 8px;
+  margin: 0 auto;
+  margin-top: 28.5px;
+  margin-bottom: 40px;
+  padding: 40px 16px;
+
+  h2 {
+    color: #34423D;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 27px;
+  }
+
+
+  .containerPerfil {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 42.75px;
+
+    .namePerfil{
+      display: flex;
+      flex-direction: column;
+      margin-left: 16px;
+    }
+
+    img {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+    }
+  }
+}

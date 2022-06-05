@@ -1,0 +1,25 @@
+
+.titleContainer {
+  display: flex;
+  align-items: center;
+  margin-top: 44.5px;
+
+  a{
+    width: 32px;
+    height: 32px;
+    background-color: #EAEFED;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 16px;
+  }
+
+  h1{
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 23.2px;
+    color: #465953;
+    margin-left: 14px;
+  }
+}
