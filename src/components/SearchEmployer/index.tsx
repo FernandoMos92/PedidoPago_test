@@ -3,6 +3,7 @@ import { FiSearch } from "react-icons/fi";
 import { CardEmployer } from "../CardEmployer";
 
 export function SearchEmployer() {
+
   return (
     <div className={styles.searchContainer}>
 

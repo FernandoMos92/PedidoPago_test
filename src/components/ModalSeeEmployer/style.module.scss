@@ -1,0 +1,36 @@
+.modalEmployer {
+  color: #587169;
+  display: flex;
+  flex-direction: column;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 150%;
+  justify-content: space-around;
+  background-color: #FFF;
+  border: 2px solid #B5F1DD;
+  border-radius: 8px;
+  box-shadow: 0px 8px 24px rgba(165, 171, 179, 0.4);
+  padding: 8px;
+  position: float;
+  height: 132px;
+  left: -18px;
+  bottom: -12px;
+  width: 320px;
+
+  div {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    padding: 8px;
+    width: 100%;
+
+    img { 
+      margin-right: 16px;
+    }
+
+    p { 
+      margin-top: 5px;
+    }
+  }
+}

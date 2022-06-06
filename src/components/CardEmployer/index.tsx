@@ -2,9 +2,11 @@ import { useState } from "react";
 import styles from "./style.module.scss";
 
 import { FiChevronDown } from "react-icons/fi";
+import COMPONENTS from "..";
 
 export function CardEmployer() {
   const [isDrop, setIsDrop] = useState(false);
+  const [isModal, setIsModal] = useState(false);
 
   return (
     <div className={isDrop ? styles.cardContainerDrop : styles.cardContainer}>
@@ -23,7 +25,6 @@ export function CardEmployer() {
       {isDrop && (
         <>
           <div className={styles.gridContainer}>
-
             <div>
               <h4>Departamento</h4>
               <p>Administrativo</p>
@@ -43,7 +44,6 @@ export function CardEmployer() {
               <h4>Unidade</h4>
               <p>Quartel General</p>
             </div>
-            
           </div>
 
           <div className={styles.activeUser}>
@@ -51,10 +51,18 @@ export function CardEmployer() {
             <span>Ativo</span>
           </div>
 
-          <button>
-            <img src="/images/file-plus.svg" alt="Icon file plus" />
-            Ações
-          </button>
+          {!isModal ? (
+            <button onClick={() => setIsModal(!isModal)}>
+              <img src="/images/file-plus.svg" alt="Icon file plus" />
+              Ações
+            </button>
+          ) : (
+            <span
+              onClick={ () => setIsModal(!isModal) } 
+            >
+              <COMPONENTS.ModalSeeEmployer />
+            </span>
+          )}
         </>
       )}
     </div>
