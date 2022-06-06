@@ -1,10 +1,15 @@
 import { useState } from "react";
 import styles from "./style.module.scss";
-
 import { FiChevronDown } from "react-icons/fi";
 import COMPONENTS from "..";
+import { Employer } from "../SearchEmployer";
 
-export function CardEmployer() {
+type CardEmployerProps = {
+  employer: Employer;
+}
+
+export function CardEmployer({employer}:CardEmployerProps) {
+
   const [isDrop, setIsDrop] = useState(false);
   const [isModal, setIsModal] = useState(false);
 
@@ -13,8 +18,8 @@ export function CardEmployer() {
       <div>
         <h4>Nome completo</h4>
         <span>
-          <img src="https://picsum.photos/200" alt="Foto do usuário" />
-          <p>Fernando Mós Pereira</p>
+          <img src={employer.image} alt={employer.name}/>
+          <p>{employer.name}</p>
         </span>
         <FiChevronDown
           onClick={() => setIsDrop(!isDrop)}
@@ -27,28 +32,31 @@ export function CardEmployer() {
           <div className={styles.gridContainer}>
             <div>
               <h4>Departamento</h4>
-              <p>Administrativo</p>
+              <p>{employer.department}</p>
             </div>
 
             <div>
               <h4>Cargo</h4>
-              <p>Diretor</p>
+              <p>{employer.role}</p>
             </div>
 
             <div>
               <h4>Unidade</h4>
-              <p>123456789</p>
+              <p>{employer.agent_id}</p>
             </div>
 
             <div>
               <h4>Unidade</h4>
-              <p>Quartel General</p>
+              <p>{employer.branch}</p>
             </div>
           </div>
 
           <div className={styles.activeUser}>
             <h4>Status</h4>
-            <span>Ativo</span>
+            <span
+              style={ employer.status === 'inactive' ? {backgroundColor:'red', color: '#FFF'} 
+              : { backgroundColor: '#B5F1DD', color: '#34423D ' }}
+            >{employer.status}</span>
           </div>
 
           {!isModal ? (

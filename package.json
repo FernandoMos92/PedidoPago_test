@@ -9,11 +9,15 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "add": "^2.0.6",
+    "axios": "^0.27.2",
     "next": "12.1.6",
     "react": "18.1.0",
     "react-dom": "18.1.0",
     "react-icons": "^4.4.0",
-    "sass": "^1.52.2"
+    "react-infinite-scroller": "^1.2.6",
+    "sass": "^1.52.2",
+    "yarn": "^1.22.18"
   },
   "devDependencies": {
     "@types/node": "17.0.39",
