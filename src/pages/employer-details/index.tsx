@@ -13,7 +13,7 @@ export default function index() {
         </Link>
         <h1>Detalhes do colaborador</h1>
       </div>
-      <COMPONENTS.CardDetails />
+      <COMPONENTS.DetailsCard />
     </div>
   );
 }

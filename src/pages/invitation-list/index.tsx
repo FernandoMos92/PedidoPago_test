@@ -25,10 +25,10 @@ export default function EmployerPosition() {
         <h4>Listagem de cargos</h4>
 
         <section className={styles.cardContainer}>
-          <COMPONENTS.CardPosition />
-          <COMPONENTS.CardPosition />
-          <COMPONENTS.CardPosition />
-          <COMPONENTS.CardPosition />
+          <COMPONENTS.PositionCard />
+          <COMPONENTS.PositionCard />
+          <COMPONENTS.PositionCard />
+          <COMPONENTS.PositionCard />
         </section>
 
         <button>

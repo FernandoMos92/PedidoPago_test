@@ -1,12 +1,27 @@
 import styles from "./style.module.scss";
 
-interface DataUser {
-  cpf: number|string;
-  tel: string;
+type DataUser = {
+  cpf: string,
+  tel: {
+    ddd: string,
+    ddi: string,
+    number:string,
+  },
   birthDate: string;
 }
 
 export function InputComponent({ cpf, tel, birthDate }: DataUser) {
+
+  const formateDate = (birthDate:string):string => {
+    const date = new Date(birthDate);
+    return `${date.toLocaleDateString()}`
+  }
+  
+  const formateDocument = (cpf:string):string => {
+    const CPF = `${cpf.slice(0, 3)} ${cpf.slice(3, 6)} ${cpf.slice(6, 9)} ${cpf.slice(9, 11)}`
+    return CPF;
+  }
+
   return (
     <div>
       
@@ -17,7 +32,7 @@ export function InputComponent({ cpf, tel, birthDate }: DataUser) {
 
         <div className={styles.containerData}>
           <p>CPF</p>
-          <h4>{cpf}</h4>
+          <h4>{formateDocument(cpf)}</h4>
         </div>
       </div>
 
@@ -28,7 +43,7 @@ export function InputComponent({ cpf, tel, birthDate }: DataUser) {
 
         <div className={styles.containerData}>
           <p>Telefone</p>
-          <h4>{tel}</h4>
+          <h4>+{tel.ddd} {tel.ddi} {tel.number}</h4>
         </div>
       </div>
 
@@ -39,7 +54,7 @@ export function InputComponent({ cpf, tel, birthDate }: DataUser) {
 
         <div className={styles.containerData}>
           <p>Nascimento</p>
-          <h4>{birthDate}</h4>
+          <h4>{formateDate(birthDate)}</h4>
         </div>
       </div>
     </div>

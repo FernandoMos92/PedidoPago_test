@@ -68,7 +68,7 @@ export function EmployerCard({employer}:CardEmployerProps) {
             <span
               onClick={ () => setIsModal(!isModal) } 
             >
-              <COMPONENTS.ModalSeeEmployer />
+              <COMPONENTS.SeeEmployerModal />
             </span>
           )}
         </>
