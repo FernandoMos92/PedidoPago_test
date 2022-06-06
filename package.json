@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@types/react-infinite-scroller": "^1.2.3",
     "add": "^2.0.6",
     "axios": "^0.27.2",
     "next": "12.1.6",
