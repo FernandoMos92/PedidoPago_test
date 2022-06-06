@@ -20,6 +20,7 @@ export function SearchEmployer() {
   const [employers, setEmployers] = useState<Employer[]>([]);
   const [isLoadingEmployersOnce, setisLoadingEmployersOnce] = useState(true);
   const [hasMoreEmployers, setHasMoreEmployers] = useState(true);
+  const [filterUser, setUserFilter] = useState<string>('');
 
   useEffect(() => {
     async function resultResponse() {
@@ -41,6 +42,15 @@ export function SearchEmployer() {
     setEmployers(newEmployers);
   };
 
+  const inputChange = ({target}:any) => {
+    setUserFilter(target.value)
+  }
+
+  const renderEmployerFilter = allEmployers.filter((employer) => {
+    if(filterUser === '') return employer;
+    if(employer.name.includes(filterUser)) return employer;
+  })
+
   return (
     <div className={styles.searchContainer}>
       <section>
@@ -52,7 +62,12 @@ export function SearchEmployer() {
         <div className={styles.inputContainer}>
           <span>Pesquisar por</span>
           <FiSearch className={styles.searchIcon} />
-          <input type="text" name="" placeholder="Pesquise por nome ou cpf" />
+          <input 
+            onChange={inputChange}
+            type="text" 
+            value={filterUser}
+            placeholder="Pesquise por nome ou cpf" 
+          />
         </div>
       </section>
 
@@ -80,13 +95,14 @@ export function SearchEmployer() {
               </button>
             }
           >
-            {
-            employers.map((employer, index) => (
+            { 
+            renderEmployerFilter.map((employer, index) => (
               <EmployerCard 
                 key={index} 
                 employer={employer} 
               />
-            ))}
+            ))
+            }
           </InfiniteScroll>
         )}
       </section>

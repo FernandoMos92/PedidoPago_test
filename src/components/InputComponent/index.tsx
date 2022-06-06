@@ -1,30 +1,31 @@
 import styles from "./style.module.scss";
 
 type DataUser = {
-  cpf: string,
+  cpf: string;
   tel: {
-    ddd: string,
-    ddi: string,
-    number:string,
-  },
+    ddd: string;
+    ddi: string;
+    number: string;
+  };
   birthDate: string;
-}
+};
 
 export function InputComponent({ cpf, tel, birthDate }: DataUser) {
-
-  const formateDate = (birthDate:string):string => {
+  const formateDate = (birthDate: string): string => {
     const date = new Date(birthDate);
-    return `${date.toLocaleDateString()}`
-  }
-  
-  const formateDocument = (cpf:string):string => {
-    const CPF = `${cpf.slice(0, 3)} ${cpf.slice(3, 6)} ${cpf.slice(6, 9)} ${cpf.slice(9, 11)}`
+    return `${date.toLocaleDateString()}`;
+  };
+
+  const formateDocument = (cpf: string): string => {
+    const CPF = `${cpf.slice(0, 3)} ${cpf.slice(3, 6)} ${cpf.slice(
+      6,
+      9
+    )} ${cpf.slice(9, 11)}`;
     return CPF;
-  }
+  };
 
   return (
     <div>
-      
       <div className={styles.containerCpf}>
         <div className={styles.containerImage}>
           <img src="/images/id.svg" alt="id icon" />
@@ -43,7 +44,9 @@ export function InputComponent({ cpf, tel, birthDate }: DataUser) {
 
         <div className={styles.containerData}>
           <p>Telefone</p>
-          <h4>+{tel.ddd} {tel.ddi} {tel.number}</h4>
+          <h4>
+            +{tel.ddd} {tel.ddi} {tel.number}
+          </h4>
         </div>
       </div>
 

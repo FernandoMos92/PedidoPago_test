@@ -52,7 +52,12 @@ export function DetailsCard() {
         birthDate={employerDetails.birth_date}
       />
 
-      <OrganizationalData />
+      <OrganizationalData 
+        id={employerDetails.id}
+        department={employerDetails.department}
+        role={employerDetails.role}
+        status={employerDetails.status}
+      />
     </div>
   );
 }
