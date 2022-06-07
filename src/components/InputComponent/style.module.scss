@@ -64,6 +64,18 @@
   margin-top: 24px;
 }
 
-.containerCpf {
+@media screen and (min-width: 1024px) {
 
+  .informationContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .containerCpf, .containerPhone, .containerCalendar {
+    background-color: #F5FAF8;
+    border: 2px solid #CAD6D1;
+    margin-top: 25px;
+    width: 286.67px;
+  }
 }

@@ -50,3 +50,30 @@
     width: 19.7rem;
   }
 } 
+
+@media screen and (min-width: 1024px) {
+  .containerOrganizational {
+    width: 1225px;
+    height: 290px;
+    margin: 0 auto;
+
+    div {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-between;
+      height: 250px;
+      width: 100%;
+
+      section {
+        p{
+          top: -14px;
+        }
+      }
+
+      .selectOptions {
+        width: 570px;
+       
+      }
+    }
+  }
+}

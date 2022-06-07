@@ -25,7 +25,7 @@ export function InputComponent({ cpf, tel, birthDate }: DataUser) {
   };
 
   return (
-    <div>
+    <div className={styles.informationContainer}>
       <div className={styles.containerCpf}>
         <div className={styles.containerImage}>
           <img src="/images/id.svg" alt="id icon" />

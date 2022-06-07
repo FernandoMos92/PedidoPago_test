@@ -1,6 +1,6 @@
 .containerCardDetails {
   width: 25rem;
-  background-color: #FFF;
+  background-color: #fff;
   border-radius: 8px;
   margin: 0 auto;
   margin-top: 28.5px;
@@ -8,12 +8,11 @@
   padding: 40px 16px;
 
   h2 {
-    color: #34423D;
+    color: #34423d;
     font-size: 18px;
     font-weight: 600;
     line-height: 27px;
   }
-
 
   .containerPerfil {
     display: flex;
@@ -21,7 +20,7 @@
     align-items: center;
     margin-bottom: 42.75px;
 
-    .namePerfil{
+    .namePerfil {
       display: flex;
       flex-direction: column;
       margin-left: 16px;
@@ -32,5 +31,85 @@
       height: 80px;
       border-radius: 50%;
     }
+  }
+}
+
+.divContainer {
+  width: 100vw;
+
+  aside {
+    border: 1px solid #eaefed;
+    background-color: #ffffff;
+    box-shadow: 0px 4px 8px rgba(165, 171, 179, 0.16);
+    position: absolute;
+    height: 1080px;
+    width: 13.33%;
+    left: 0px;
+    top: 60px;
+    bottom: 0px;
+  }
+  .mainSection {
+    background-color: #ffffff;
+    border-radius: 8px;
+    border: 2px solid black;
+    box-sizing: border-box;
+    height: 55.43%;
+    margin-left: 30%;
+    width: 49.79%;
+  }
+}
+.infoEmployer {
+  display: flex;
+  flex-flow: row nowrap;
+  margin-top: 40px;
+  margin-left: 24px;
+
+  img {
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+  }
+
+  span {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 24px;
+  }
+}
+
+.menuToBack {
+  align-items: center;
+  justify-content: start;
+  display: flex;
+  margin-top: 56px;
+  margin-left: 30%;
+  margin-bottom: 26px;
+
+  span {
+    align-items: center;
+    background: #eaefed;
+    border-radius: 80px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    height: 36px;
+    justify-content: center;
+    margin-right: 16px;
+    padding: 10px;
+    width: 36px;
+  }
+}
+
+.personalInformation {
+  padding-left: 5%;
+}
+
+.moreInformation {
+  margin-bottom: 40px;
+  h3 {
+    margin-top: 45.75px;
+    margin-left: 24px;
   }
 }
