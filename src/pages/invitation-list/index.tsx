@@ -1,9 +1,23 @@
 import styles from "./style.module.scss";
 import { FiSearch } from "react-icons/fi";
 import COMPONENTS from "../../components";
+import { useWindowSize } from "../../hook/UseWindowSize";
+import TableData from "../../components/TableData";
 
 export default function EmployerPosition() {
-  return (
+
+  const size = useWindowSize();
+
+  return size.width >= 1024 ? (
+    <main className={styles.mainContainer}>
+    <aside></aside>
+
+    <section className={styles.dashBoadContainer}>
+      <h1 className={styles.titleContainer}>Organização</h1>
+      <TableData />
+    </section>
+
+  </main>):(
     <div className={styles.mainContainer}>
       <h2>Colaboradores</h2>
 

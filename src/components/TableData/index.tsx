@@ -2,10 +2,10 @@ import { useState, useEffect } from "react";
 import styles from "./style.module.scss";
 import Link from "next/link";
 import { FiSearch } from "react-icons/fi";
-import { allEmployer } from "../../api/connection";
+import { allEmployer, positionList} from "../../api/connection";
 
 export default function TableData() {
-  const [employers, setEmployers] = useState([]);
+  const [arrayData, setArrayData] = useState([]);
   const [page, setPage] = useState([]);
   const { pathname } = window.location;
 
@@ -13,13 +13,17 @@ export default function TableData() {
     async function resultResponse() {
       const result = await allEmployer();
       const { items } = result.data;
-      setEmployers(items.slice(0, 6));
+      setArrayData(items.slice(0, 6));
     }
     resultResponse();
   }, []);
 
   return (
-    <table className={styles.tbData}>
+    <table 
+      className={styles.tbData}
+          style={pathname === '/invitation-list' ? 
+          {height:"840px", gap:"20px"} : {height: "840px", gap:"40px"}}
+    >
       <nav>
         <div
           style={
@@ -51,66 +55,75 @@ export default function TableData() {
         <FiSearch className={styles.iconSearch} />
       </div>
 
-      <h2 className={styles.titleTable}>Listagem de cargos</h2>
+      <h2 className={styles.titleTable}>
+        {pathname === '/' ? 'Listagem de colaboradores' : 'Listagem de cargos'}
+      </h2>
 
       <thead className={styles.tbHeader}>
-        <tr>
-          <td>Nome completo</td>
-          <td>Departamento</td>
-          <td>Cargo</td>
-          <td>Unidade</td>
-          <td>Status</td>
-        </tr>
+        {pathname === "/" ? (
+          <tr>
+            <td>Nome completo</td>
+            <td>Departamento</td>
+            <td>Cargo</td>
+            <td>Unidade</td>
+            <td>Status</td>
+          </tr>
+        ) : (
+          <tr>
+            <td>Cargo</td>
+            <td>Departamento</td>
+            <td>Colaboradores</td>
+          </tr>
+        )}
       </thead>
       <tbody className={styles.tbBody}>
-        {
-          employers.map((employer: any) => {
-            return (
-              <tr className={styles.trBody}>
-                <td>
-                  <div>
-                    <img src={employer.image} alt={employer.name} />
-                    <p>{employer.name}</p>
-                  </div>
-                </td>
-                <td>{employer.department}</td>
-                <td>{employer.role}</td>
-                <td>{employer.branch}</td>
-                <td>
-                  <span
-                    style={
-                      employer.status === "inactive"
-                        ? { backgroundColor: "#EAEFED", color: "#34423D" }
-                        : { backgroundColor: "#B5F1DD", color: "#34423D " }
-                    }
-                  >
-                    {employer.status}
-                  </span>
-                  <img src="/images/more-vertical.svg" alt="More Vertical" />
-                </td>
-              </tr>
-            );
-          })}
+        {arrayData.map((employer: any) => {
+          return (
+            <tr className={styles.trBody}>
+              <td>
+                <div>
+                  <img src={employer.image} alt={employer.name} />
+                  <p>{employer.name}</p>
+                </div>
+              </td>
+              <td>{employer.department}</td>
+              <td>{employer.role}</td>
+              <td>{employer.branch}</td>
+              <td>
+                <span
+                  style={
+                    employer.status === "inactive"
+                      ? { backgroundColor: "#EAEFED", color: "#34423D" }
+                      : { backgroundColor: "#B5F1DD", color: "#34423D " }
+                  }
+                >
+                  {employer.status}
+                </span>
+                <img src="/images/more-vertical.svg" alt="More Vertical" />
+              </td>
+            </tr>
+          );
+        })}
         <div className={styles.tbFooter}>
           <div className={styles.infoContainer}>
             <p>
-              Mostrando {page.length} de {employers.length} registros
+              Mostrando {page.length} de {arrayData.length} registros
             </p>
             <select>
-              {employers.map((employer, index) => {
+              {arrayData.map((employer, index) => {
                 return <option key={employer}>{index + 1}</option>;
               })}
             </select>
           </div>
           <div className={styles.buttonContainer}>
-          <button className={styles.arrowLeft}>
-            <img src="/images/left-arrow.svg" alt="" />
-          </button>
-          1 de {Math.ceil(employers.length/6)}
-          <button className={styles.arrowRight}>
-            <img src="/images/right-arrow.svg" alt="" />
-          </button>
-        </div>
+            <button className={styles.arrowLeft}>
+              <img src="/images/left-arrow.svg" alt="" />
+            </button>
+            1 de {Math.ceil(arrayData.length / 6)}
+            <button className={styles.arrowRight}>
+              <img src="/images/right-arrow.svg" alt="" />
+            </button>
+          </div>
         </div>
       </tbody>
     </table>
