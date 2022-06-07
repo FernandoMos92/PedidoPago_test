@@ -1,0 +1,17 @@
+$NeutralWhite: #FFFFFF;
+
+.tbData {
+  align-items: flex-start;
+  background-color: $NeutralWhite;
+  box-shadow: 0px 4px 8px rgba(165, 171, 179, 0.16);
+  border-radius: 8px;
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 40px;
+  height: 841px;
+  justify-content: center;
+  margin-top: 24px;
+  margin-left: 31.77%;
+  padding: 40px 24px;
+  width: 956px;
+}

@@ -5,6 +5,7 @@ import { EmployerCard } from "../EmployerCard";
 import { allEmployer } from "../../api/connection";
 import InfiniteScroll from "react-infinite-scroller";
 import { useWindowSize } from "../../hook/UseWindowSize";
+import TableData from '../TableData';
 
 export type Employer = {
   agent_id: number;
@@ -58,74 +59,15 @@ export function SearchEmployer() {
     <main className={styles.mainContainer}>
       <aside></aside>
 
-      <div className={styles.boardContainer}>
-        <h1>Organização</h1>
-        <nav className={styles.menuContainer}>
-          <div>
-            <a>Colabores</a>
-          </div>
-          <div>
-            <a>Cargos</a>
-          </div>
-        </nav>
+      <section className={styles.dashBoadContainer}>
+        <h1 className={styles.titleContainer}>Organização</h1>
 
-        <div className={styles.searchBoxContainer}>
-          <span>Pesquisar por</span>
-          <FiSearch className={styles.searchIconBigSize} />
-          <input
-            className={styles.searchBox}
-            type="text"
-            placeholder="Pesquise por nome ou cpf"
-            name=""
-            id=""
-          />
-        </div>
+        <TableData />
+      </section>
 
-        <h2>Listagem de colaboradores</h2>
-
-        <table>
-          <thead>
-            <tr>
-              <td>Nome completo</td>
-              <td>Departamento</td>
-              <td>Cargo</td>
-              <td>Unidade</td>
-              <td>Status</td>
-            </tr>
-            <tbody>
-             {
-               employers.map((employer) => (
-                <tr>
-                  <td>
-                    <div>
-                      <img src={employer.image} alt={employer.name} />
-                      <p>{employer.name}</p>
-                    </div>
-                  </td>
-                  <td>
-                    <p>{employer.department}</p>
-                  </td>
-                  <td>
-                    <p>{employer.role}</p>
-                  </td>
-                  <td>
-                    <p>{employer.branch}</p>
-                  </td>
-                  <td>
-                    <span>
-                      <p>{employer.status}</p>
-                    </span>
-                  </td>
-                </tr>
-               ))
-             }
-            </tbody>
-          </thead>
-        </table>
-      </div>
     </main>
   ) : (
-    <div className={styles.searchContainer}>
+    <main className={styles.searchContainer}>
       <section>
         <select name="" id="">
           <option value="">Colaboradores</option>
@@ -171,6 +113,6 @@ export function SearchEmployer() {
           </InfiniteScroll>
         )}
       </section>
-    </div>
+    </main>
   );
 }

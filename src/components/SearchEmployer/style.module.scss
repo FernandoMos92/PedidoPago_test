@@ -120,8 +120,9 @@
   }
 }
 
+// Setting for +1024px
 .mainContainer {
-  width: 100%;
+  width: 100vw;
 
   aside {
     border: 1px solid #eaefed;
@@ -129,192 +130,25 @@
     box-shadow: 0px 4px 8px rgba(165, 171, 179, 0.16);
     position: absolute;
     height: 100%;
-    width: 16rem;
+    width: 13.33%;
     left: 0px;
-    top: 3.8rem;
+    top: 6.29%;
     bottom: 0px;
   }
 
-  .boardContainer {
-    position: relative;
-    background-color: #ffffff;
-    border: 1px solid transparent;
-    border-radius: 8px;
-    margin-top: 6.68rem;
-    margin-left: 38.12rem;
-    width: 59.75rem;
-    height: 46.31rem;
+  .dashBoadContainer {
+    height: 94.81%;
+    width: 89.76%;
 
-    h1 {
-      color: #34423d;
-      font-weight: 600;
+    .titleContainer {
+      color: #34423D;
       font-size: 32px;
-      position: absolute;
-      height: 32px;
-      line-height: 100%;
-      top: -50px;
-      width: 210px;
-    }
-
-    h2 {
-      color: #34423d;
       font-weight: 600;
-      font-size: 16px;
-      height: 16px;
       line-height: 100%;
-      margin: 40px 0px 0px 24px;
-      width: 223px;
-    }
-  }
-
-  .menuContainer {
-    align-items: center;
-    border-bottom: 2px solid #eaefed;
-    display: flex;
-    justify-content: flex-start;
-    margin: 50px 30px 40px 24px;
-    padding: 0;
-    height: 1.87rem;
-    width: 56.37rem;
-
-    div {
-      a {
-        color: #34423d;
-        padding-bottom: 4px;
-        font-weight: 600;
-        font-size: 14px;
-        margin-left: 44.5px;
-        width: 107px;
-        height: 14px;
-        line-height: 100%;
-        transition: all 0.2s;
-        cursor: pointer;
-      }
-    }
-  }
-
-  .searchBoxContainer {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    position: relative;
-
-    span {
-      background-color: #fff;
-      color: #a3b8b0;
-      position: absolute;
-      font-size: 14px;
-      font-weight: 500;
-      top: -8px;
-      left: 40px;
-      width: 97px;
-      height: 15px;
-    }
-    .searchIconBigSize {
-      color: #587169;
-      height: 24px;
-      left: 44px;
-      position: absolute;
-      top: 13px;
-      width: 24px;
-    }
-    .searchBox {
-      border: 2px solid #cad6d1;
-      background-color: #ffffff;
-      border-radius: 8px;
-      box-sizing: border-box;
-      color: #587169;
-      font-weight: 500;
-      font-size: 16px;
-      height: 52px;
-      line-height: 150%;
-      padding-left: 50px !important;
-      padding: 20px;
-      outline: none;
-      width: 908px;
-    }
-  }
-
-  table {
-    align-items: center;
-    border: 1px solid #cad6d1;
-    border-radius: 8px 8px 0px 0px;
-    box-sizing: border-box;
-    color: #587169;
-    display: flex;
-    flex-flow: row no-repeat;
-    justify-content: flex-start;
-    height: 42px;
-    margin: 0 auto;
-    margin-top: 40px;
-    padding: 16px;
-    position: relative;
-    user-select: none;
-    width: 902px;
-
-    thead {
-      align-items: center;
-      display: flex;
-      flex-flow: row nowrap;
-      justify-content: space-between;
-      font-size: 12px;
-
-      tr {
-        align-items: center;
-        display: flex;
-        flex-flow: row nowrap;
-        justify-content: space-between;
-        width: 902px;
-      }
-
-      td {
-        color: #587169;
-        font-weight: 600;
-        font-size: 12px;
-        height: 17px;
-        line-height: 140%;
-      }
-
-      td:first-child {
-        width: 196px;
-      }
-
-      td:last-child {
-        width: 182px;
-      }
-    }
-
-    tbody {
-      position: absolute;
-      display: flex;
-      flex-flow: column nowrap;
-      justify-content: space-between;
-      margin-bottom: 37px;
-      top: 40px;
-      left: 0px;
-      height: 523px;
-      width: 902px;
-      flex-wrap: wrap;
-
-      tr {
-        border-bottom: 2px solid lightgrey;
-        td {
-          div {
-            display: flex;
-            // padding: 18px 8px 19px 16px;
-            flex-flow: row wrap;
-            p {
-              font-size: 12px;
-              font-weight: 600;
-            }
-            img {
-              height: 32px;
-              width: 32px;
-              border-radius: 50%;
-            }
-          }
-        }
-      }
+      margin-top: 4.62%;
+      margin-left: 31.77%;
+      height: 32px;
+      width: 210px;
     }
   }
 }
