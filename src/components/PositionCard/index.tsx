@@ -2,7 +2,7 @@ import {useState} from 'react';
 import styles from './style.module.scss';
 import { FiChevronDown } from "react-icons/fi";
 
-export function CardPosition() {
+export function PositionCard() {
 
   const [isDrop, setIsDrop] = useState(true)
 
