@@ -4,12 +4,10 @@ import { DetailsCard } from './DetailsCard';
 import { PositionCard } from './PositionCard';
 import { SeeEmployerModal } from './SeeEmployerModal';
 
-const COMPONENTS = {
+export default {
   Header,
   SearchEmployer,
   DetailsCard,
   PositionCard,
-  SeeEmployerModal,
-}
-
-export default COMPONENTS;
+  SeeEmployerModal
+};

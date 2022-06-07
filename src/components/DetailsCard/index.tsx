@@ -25,7 +25,7 @@ type Detail = {
   status: string;
 };
 
-export function DetailsCard() {
+export const DetailsCard = () => {
   const [employerDetails, setEmployerDetails] = useState<Detail>();
 
   useEffect(() => {
@@ -35,7 +35,7 @@ export function DetailsCard() {
     })()
   }, []);
 
-  return employerDetails && (
+  return employerDetails ? (
     <div className={styles.containerCardDetails}>
       <div className={styles.containerPerfil}>
         <img src={employerDetails.image} alt={employerDetails.name} />
@@ -59,5 +59,9 @@ export function DetailsCard() {
         status={employerDetails.status}
       />
     </div>
-  );
+  ) : (
+    <div>
+      Loading...
+    </div>
+  )
 }

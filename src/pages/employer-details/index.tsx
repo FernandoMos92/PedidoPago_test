@@ -1,6 +1,6 @@
 import styles from "./style.module.scss";
 import Link from "next/link";
-import COMPONENTS from "../../components";
+import { DetailsCard } from "../../components/DetailsCard";
 
 export default function index() {
   return (
@@ -13,7 +13,7 @@ export default function index() {
         </Link>
         <h1>Detalhes do colaborador</h1>
       </div>
-      <COMPONENTS.DetailsCard />
+      <DetailsCard />
     </div>
   );
 }

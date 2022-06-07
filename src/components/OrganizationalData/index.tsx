@@ -7,7 +7,7 @@ type Position = {
   status: string,
 };
 
-export function OrganizationalData({department, role, status, id}:Position) {
+export function OrganizationalData({id, department, role, status}:Position) {
   return (
     <div className={styles.containerOrganizational}>
       <h2>Dados organizacionais</h2>
