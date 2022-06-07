@@ -54,7 +54,7 @@ export function EmployerCard({employer}:CardEmployerProps) {
           <div className={styles.activeUser}>
             <h4>Status</h4>
             <span
-              style={ employer.status === 'inactive' ? {backgroundColor:'red', color: '#FFF'} 
+              style={ employer.status === 'inactive' ? {backgroundColor:'#EAEFED', color: '#34423D'} 
               : { backgroundColor: '#B5F1DD', color: '#34423D ' }}
             >{employer.status}</span>
           </div>
