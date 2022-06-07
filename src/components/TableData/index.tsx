@@ -11,9 +11,14 @@ export default function TableData() {
 
   useEffect(() => {
     async function resultResponse() {
-      const result = await allEmployer();
-      const { items } = result.data;
-      setArrayData(items.slice(0, 6));
+      const result = pathname === '/' ? await allEmployer() : await positionList();
+      if(pathname === '/') {
+        const { items } = result.data;
+        setArrayData(items.slice(0, 6));
+      } else {
+        const { roles } = result.data;
+        setArrayData(roles.slice(0, 6));
+      }
     }
     resultResponse();
   }, []);
@@ -76,56 +81,106 @@ export default function TableData() {
           </tr>
         )}
       </thead>
-      <tbody className={styles.tbBody}>
-        {arrayData.map((employer: any) => {
-          return (
-            <tr className={styles.trBody}>
-              <td>
-                <div>
-                  <img src={employer.image} alt={employer.name} />
-                  <p>{employer.name}</p>
-                </div>
-              </td>
-              <td>{employer.department}</td>
-              <td>{employer.role}</td>
-              <td>{employer.branch}</td>
-              <td>
-                <span
-                  style={
-                    employer.status === "inactive"
-                      ? { backgroundColor: "#EAEFED", color: "#34423D" }
-                      : { backgroundColor: "#B5F1DD", color: "#34423D " }
-                  }
+
+      {
+        pathname === "/" ? (
+          <tbody className={styles.tbBody}>
+          {arrayData.map((employer: any) => {
+            return (
+              <tr className={styles.trBody}>
+                <td>
+                  <div>
+                    <img src={employer.image} alt={employer.name} />
+                    <p>{employer.name}</p>
+                  </div>
+                </td>
+                <td>{employer.department}</td>
+                <td>{employer.role}</td>
+                <td>{employer.branch}</td>
+                <td>
+                  <span
+                    style={
+                      employer.status === "inactive"
+                        ? { backgroundColor: "#EAEFED", color: "#34423D" }
+                        : { backgroundColor: "#B5F1DD", color: "#34423D " }
+                    }
+                  >
+                    {employer.status}
+                  </span>
+                  <img src="/images/more-vertical.svg" alt="More Vertical" />
+                </td>
+              </tr>
+            );
+          })}
+          <div className={styles.tbFooter}>
+            <div className={styles.infoContainer}>
+              <p>
+                Mostrando {page.length} de {arrayData.length} registros
+              </p>
+              <select>
+                {arrayData.map((employer, index) => {
+                  return <option key={employer}>{index + 1}</option>;
+                })}
+              </select>
+            </div>
+            <div className={styles.buttonContainer}>
+              <button className={styles.arrowLeft}>
+                <img src="/images/left-arrow.svg" alt="" />
+              </button>
+              1 de {Math.ceil(arrayData.length / 6)}
+              <button className={styles.arrowRight}>
+                <img src="/images/right-arrow.svg" alt="" />
+              </button>
+            </div>
+          </div>
+        </tbody>
+        ) : (
+          <tbody className={styles.tbBody}>
+          {arrayData.map((position: any) => {
+            return (
+              <tr className={styles.trBody}>
+                <td>{position.name}</td>
+                <td
+                  style={{paddingLeft: "70px"}}
+                >{position.departament}</td>
+                <td
+                  style={{
+                    paddingLeft: "135px", 
+                    position: "relative"
+                  }}
                 >
-                  {employer.status}
-                </span>
-                <img src="/images/more-vertical.svg" alt="More Vertical" />
-              </td>
-            </tr>
-          );
-        })}
-        <div className={styles.tbFooter}>
-          <div className={styles.infoContainer}>
-            <p>
-              Mostrando {page.length} de {arrayData.length} registros
-            </p>
-            <select>
-              {arrayData.map((employer, index) => {
-                return <option key={employer}>{index + 1}</option>;
-              })}
-            </select>
+                  {position.agents_quantity}
+                  <img 
+                    src="/images/more-vertical.svg" 
+                    alt="More vertical" 
+                    style={{
+                      position: "absolute",
+                      right: "0px", 
+                    }}  
+                  />
+                </td>
+              </tr>
+            );
+          })}
+          <div className={styles.tbFooter}>
+
+            <div 
+              className={styles.buttonContainer}
+              style={{marginLeft:"710px"}}
+            >
+              <button className={styles.arrowLeft}>
+                <img src="/images/left-arrow.svg" alt="" />
+              </button>
+              1 de {Math.ceil(arrayData.length / 6)}
+              <button className={styles.arrowRight}>
+                <img src="/images/right-arrow.svg" alt="" />
+              </button>
+            </div>
           </div>
-          <div className={styles.buttonContainer}>
-            <button className={styles.arrowLeft}>
-              <img src="/images/left-arrow.svg" alt="" />
-            </button>
-            1 de {Math.ceil(arrayData.length / 6)}
-            <button className={styles.arrowRight}>
-              <img src="/images/right-arrow.svg" alt="" />
-            </button>
-          </div>
-        </div>
-      </tbody>
+        </tbody>
+        )
+
+      }
     </table>
   );
 }

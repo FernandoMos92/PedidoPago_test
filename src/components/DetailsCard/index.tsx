@@ -3,6 +3,7 @@ import { InputComponent } from "../InputComponent";
 import styles from "./style.module.scss";
 import { OrganizationalData } from "../OrganizationalData";
 import { employerDatails } from "../../api/connection";
+import { useWindowSize } from '../../hook/UseWindowSize';
 
 type Detail = {
   id: number;
@@ -29,13 +30,19 @@ export const DetailsCard = () => {
   const [employerDetails, setEmployerDetails] = useState<Detail>();
 
   useEffect(() => {
-    (async () => {
-      const details = (await employerDatails()).data.agent;
-      setEmployerDetails(details);
-    })()
+    async function resultResponse() {
+      const response = await employerDatails();
+      const result = response.data.agent;
+      setEmployerDetails(result);
+    }
+    resultResponse()
   }, []);
 
-  return employerDetails ? (
+  const size = useWindowSize();
+
+  return employerDetails ? size.width >= 1024 ? (
+    <p>teste</p>
+  ) :(
     <div className={styles.containerCardDetails}>
       <div className={styles.containerPerfil}>
         <img src={employerDetails.image} alt={employerDetails.name} />
