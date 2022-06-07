@@ -61,7 +61,6 @@ export function SearchEmployer() {
 
       <section className={styles.dashBoadContainer}>
         <h1 className={styles.titleContainer}>Organização</h1>
-
         <TableData />
       </section>
 

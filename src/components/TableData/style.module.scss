@@ -9,9 +9,69 @@ $NeutralWhite: #FFFFFF;
   flex-flow: column nowrap;
   gap: 40px;
   height: 841px;
-  justify-content: center;
   margin-top: 24px;
   margin-left: 31.77%;
   padding: 40px 24px;
   width: 956px;
+
+  nav {
+    align-items: flex-start;
+    border-bottom: 2px solid #EAEFED;
+    color: #34423D;
+    display: flex;
+    font-size: 14px;
+    font-weight: 600;
+    height: 30px;
+    line-height: 100%;
+    margin-bottom: 40px;
+    padding-left: 44.5px;
+    width: 100%;
+
+    div {
+      margin-right: 116.5px;
+      transition: all .5s ease-in-out;
+    }
+  }
+  .searchContainer{
+    display: flex;
+    flex-flow: row nowrap;
+    position: relative;
+    width: 100%;
+
+    input {
+      background-color: $NeutralWhite;
+      border: 2px solid #CAD6D1;
+      border-radius: 8px;
+      box-sizing: border-box;
+      color: #587169;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 150%;
+      padding: 20px;
+      padding-left: 52px;
+      height: 52px;
+      width: 94.76%;
+    }
+
+    p, .iconSearch {
+      position: absolute;
+    }
+
+    p {
+      background-color: $NeutralWhite;
+      bottom: 50px;
+      left: 8px;
+      height: 10px;
+      color: #A3B8B0;
+      font-size: 14px;
+      font-weight: 500;
+    }
+
+    .iconSearch {
+      top: 15px;
+      left: 22px;
+      height: 24px;
+      width: 24px;
+    }
+  }
 }
