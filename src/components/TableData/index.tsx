@@ -13,20 +13,10 @@ export default function TableData() {
     async function resultResponse() {
       const result = await allEmployer();
       const { items } = result.data;
-      setEmployers(items);
+      setEmployers(items.slice(0, 6));
     }
     resultResponse();
-    pagination();
   }, []);
-
-  const pagination = () => {
-    if(employers.length !== 0) {
-      const newArr = employers.slice(0, 6);
-      setPage(newArr);
-    }
-  };
-
-  console.log(page);
 
   return (
     <table className={styles.tbData}>
@@ -73,8 +63,8 @@ export default function TableData() {
         </tr>
       </thead>
       <tbody className={styles.tbBody}>
-        {page.length !== 0 ? (
-          page.map((employer: any) => {
+        {
+          employers.map((employer: any) => {
             return (
               <tr className={styles.trBody}>
                 <td>
@@ -100,10 +90,7 @@ export default function TableData() {
                 </td>
               </tr>
             );
-          })
-        ) : (
-          <div>Loading...</div>
-        )}
+          })}
         <div className={styles.tbFooter}>
           <div className={styles.infoContainer}>
             <p>
