@@ -4,7 +4,6 @@ import { useWindowSize } from "../../hook/UseWindowSize";
 
 export function Header() {
   const size = useWindowSize();
-  console.log("Header", size);
   return size.width >= 1024 ? (
     <header className={styles.headerContainerBigSize}>
       <Link href="/">
