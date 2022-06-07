@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { InputComponent } from "../InputComponent";
 import styles from "./style.module.scss";
+import Link from "next/link";
 import { OrganizationalData } from "../OrganizationalData";
 import { employerDatails } from "../../api/connection";
 import { useWindowSize } from "../../hook/UseWindowSize";
@@ -46,7 +47,7 @@ export const DetailsCard = () => {
         <aside></aside>
 
         <div className={styles.menuToBack}>
-          <span><img src="/images/arrow-left.svg" alt="" /></span>
+          <Link href="/"><a><span><img src="/images/arrow-left.svg" alt="" /></span></a></Link>
           <h1>Detalhes do colaborador</h1>
         </div>
         <section className={styles.mainSection}>
